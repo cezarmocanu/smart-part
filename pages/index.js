@@ -2,33 +2,18 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import {ContactForm} from '../components/contact-form/ContactForm';
+import {AppNavbar} from '../components/navbar/Navbar';
 
 export default function Home() {
   return (
     <div className="App">
-      <nav className="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div className="container">
-                <a className="navbar-brand js-scroll-trigger" href="#page-top">SMART PART</a>
-                <button className="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i className="fas fa-bars"></i>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarResponsive">
-                    <ul className="navbar-nav ml-auto">
-                        <li className="nav-item mx-0 mx-lg-1"><a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Servicii</a></li>
-                        <li className="nav-item mx-0 mx-lg-1"><a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Despre Noi</a></li>
-                        <li className="nav-item mx-0 mx-lg-1"><a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#etape">Demo Gratuit</a></li>
-                        <li className="nav-item mx-0 mx-lg-1"><a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
-        <header className="masthead bg-primary text-white text-center">
+      
+        <AppNavbar/>
+        <header id="home" className="masthead bg-primary text-white text-center">
             <div className="container d-flex align-items-center flex-column">
                 
                 <div className="icon-background mb-5">
-                    <Image layout="fill"className="masthead-avatar" src="/assets/svg/ux.svg" alt="..." />
+                    <Image width={120} height={120} className="masthead-avatar" src="/assets/svg/ux.svg" alt="..." />
                 </div>
                 
                 <h1 className="masthead-heading text-uppercase mb-0">SMART PART</h1>
@@ -43,7 +28,7 @@ export default function Home() {
             </div>
         </header>
         
-        <section className="page-section portfolio" id="portfolio">
+        <section className="page-section portfolio" id="services">
             <div className="container">
                 
                 <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">Servicii</h2>
@@ -140,7 +125,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="page-section portfolio" id="etape">
+        <section className="page-section portfolio" id="steps">
             <div className="container">
                 
                 <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">Demo Gratuit</h2>
@@ -247,10 +232,7 @@ export default function Home() {
         <div className="copyright py-4 text-center text-white">
             <div className="container">
                 <small>
-                    Copyright &copy; SmartPart
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
+                    Copyright &copy; SmartPart {new Date().getFullYear()}
                 </small>
             </div>
         </div>
