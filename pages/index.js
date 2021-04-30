@@ -1,32 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import {ContactForm} from '../components/contact-form/ContactForm';
-import {AppNavbar} from '../components/navbar/Navbar';
+import {ContactForm} from '@Components/contact-form/ContactForm';
+import {AppNavbar} from '@Components/navbar/Navbar';
+import {AppHeader} from '@Components/header/Header';
+import LABELS from '@Strings';
 
 export default function Home() {
   return (
-    <div className="App">
-      
-        <AppNavbar/>
-        <header id="home" className="masthead bg-primary text-white text-center">
-            <div className="container d-flex align-items-center flex-column">
-                
-                <div className="icon-background mb-5">
-                    <Image width={120} height={120} className="masthead-avatar" src="/assets/svg/ux.svg" alt="..." />
-                </div>
-                
-                <h1 className="masthead-heading text-uppercase mb-0">SMART PART</h1>
-                
-                <div className="divider-custom divider-light">
-                    <div className="divider-custom-line"></div>
-                    <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
-                    <div className="divider-custom-line"></div>
-                </div>
-                
-                <p className="masthead-subheading font-weight-light mb-0">Digitalizeaza - Automatizeaza - Evolueaza</p>
-            </div>
-        </header>
+    <div className="App">      
+        <Head>
+          <title>{LABELS.smartPartCallToAction}</title>
+          <meta name="description" content={LABELS.metaDescription}></meta>
+        </Head>
+        <AppNavbar />
+        <AppHeader />
+        
         
         <section className="page-section portfolio" id="services">
             <div className="container">
