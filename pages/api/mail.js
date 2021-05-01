@@ -12,9 +12,10 @@ const TRANSPORTER = nodemailer.createTransport({
 function post(req,res) {
     const {company, contactName, email, phoneNumber, extra} = req.body;
 
+    console.log(req.body);
     const WELCOME_MAIL = {
         from: 'smartpartinfo@gmail.com',
-        to: 'cezarmocanu2014@gmail.com',
+        to: email,
         subject: 'Bine ai venit la SmartPart!',
         text: `
             Buna ziua!\n\n 
@@ -45,9 +46,9 @@ function get(req,res) {
 async function handle(req, res){
     if (req.headers.key === process.env.CLIENT_KEY) {
         if (req.method === 'POST') {
-            post(req,res);
+            return post(req,res);
         }
-        get(req,res);
+        return get(req,res);
     }
     res.status(401);
     res.end();    
