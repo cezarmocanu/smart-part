@@ -114,48 +114,37 @@ export default function Home() {
                 <div className="row justify-content-center">
                     
                     <div className="col-md-12 col-lg-4 mb-5">
-                        <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                            <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <Image layout="fill"className="img-fluid" src="/assets/svg/1.svg" alt="..." />
-                            <div className="service-description mt-2">
-                                <h4>Contactează-ne!</h4>
-                                <p>Printr-un email la <span className="email">smartpartinfo@gmail.com</span> sau completează formularul de mai jos și te contactăm noi.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div className="col-md-12 col-lg-4 mb-5">
-                        <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                            <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <Image layout="fill"className="img-fluid" src="/assets/svg/2.svg" alt="..." />
-                            <div className="service-description mt-2">
-                                <h4>Analiză de bază</h4>
-                                <p>Organizăm o întalnire, analizăm procesele din compania ta, și discutăm idei preliminare</p>
-                            </div>
-                        </div>
+                        <ServiceCard
+                            title={"Contactează-ne!"}
+                            text={"Printr-un email la smartpartinfo@gmail.com sau completează formularul de mai jos și te contactăm noi."}
+                            img={'/assets/svg/1.svg'}
+                            imgAlt={"Printr-un email la smartpartinfo@gmail.com sau completează formularul de mai jos și te contactăm noi."}
+                        />
                     </div>
 
                     <div className="col-md-12 col-lg-4 mb-5">
-                        <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                            <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <Image layout="fill"className="img-fluid" src="/assets/svg/3.svg" alt="..." />
-                            <div className="service-description mt-2">
-                                <h4>Prezentare demo</h4>
-                                <p>În decurs de 30 de zile, revenim cu o aplicație demonstrativa gratuită, și stabilim o posbila colaborare.</p>
-                            </div>
-                        </div>
-                    </div>           
+                        <ServiceCard
+                            title={"Analiză de bază"}
+                            text={"Organizăm o întalnire, analizăm procesele din compania ta, și discutăm idei preliminare"}
+                            img={'/assets/svg/2.svg'}
+                            imgAlt={"Organizăm o întalnire, analizăm procesele din compania ta, și discutăm idei preliminare"}
+                        />
+                    </div>
+
+
+                    <div className="col-md-12 col-lg-4 mb-5">
+                        <ServiceCard
+                            title={"Prezentare demo"}
+                            text={"În decurs de 30 de zile, revenim cu o aplicație demonstrativa gratuită, și stabilim o posbila colaborare."}
+                            img={'/assets/svg/3.svg'}
+                            imgAlt={"În decurs de 30 de zile, revenim cu o aplicație demonstrativa gratuită, și stabilim o posbila colaborare."}
+                        />
+                    </div>        
                 </div>
             </div>
         </section>
         <hr/>
-        <section className="page-section" id="contact">
+        <section className="page-section half-section" id="contact">
             <div className="container">
                 
                 <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">Contact</h2>
@@ -167,7 +156,7 @@ export default function Home() {
                 </div>
                 
                 <div className="row">
-                    <div className="col-lg-8 mx-auto">
+                    <div className="col-lg-6 mx-auto">
                         <ContactForm/>
                     </div>
                 </div>

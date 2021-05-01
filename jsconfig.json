@@ -4,7 +4,7 @@
       "paths": {
         "@Components/*": ["./components/*"],
         "@Styles/*": ["./styles/*"],
-        "@Strings": ["./strings.js"],
+        "@Strings": ["./strings.js"]
       }
     }
   }
