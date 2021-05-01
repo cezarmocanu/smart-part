@@ -1,9 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
+import {ServiceCard} from '@Components/service-card/ServiceCard';
 import {ContactForm} from '@Components/contact-form/ContactForm';
 import {AppNavbar} from '@Components/navbar/Navbar';
 import {AppHeader} from '@Components/header/Header';
+
 import LABELS from '@Strings';
 
 export default function Home() {
@@ -19,7 +21,6 @@ export default function Home() {
         
         <section className="page-section portfolio" id="services">
             <div className="container">
-                
                 <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">Servicii</h2>
                 
                 <div className="divider-custom">
@@ -29,61 +30,46 @@ export default function Home() {
                 </div>
                 
                 <div className="row justify-content-center">
-                    
-                    <div className="col-md-12 col-lg-4 mb-5">
-                        <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                            <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <Image layout="fill"className="img-fluid" src="/assets/svg/prototype.svg" alt="..." />
-                            <div className="service-description mt-2">
-                                <h4>Analiză și planificare</h4>
-                                <p>Realizăm o analiză a proceselor ce se deruleaza in firma dumeanvoastra și propunem posibile solutii de digitalizare a acestora.</p>
-                            </div>
-                        </div>
+                    <div className="col-md-6 col-lg-4 mb-5 flex">
+                        <ServiceCard
+                            title={LABELS.planAndAnalyze}
+                            text={LABELS.planAndAnalyzeDescription}
+                            img={'/assets/svg/prototype.svg'}
+                            imgAlt={LABELS.planAndAnalyzeDescription}
+                        />
                     </div>
-                    
-                    <div className="col-md-12 col-lg-4 mb-5">
-                        <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                            <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <Image layout="fill"className="img-fluid" src="/assets/svg/ux.svg" alt="..." />
-                            <div className="service-description mt-2">
-                                <h4>Soluție bazată pe feedback</h4>
-                                <p>Construim o soluție digitală bazată pe nevoile și provocarile pe care le întampinați.</p>
-                            </div>
-                        </div>
+                    <div className="col-md-6 col-lg-4 mb-5">
+                        <ServiceCard
+                            title={LABELS.feedbackBasedSolution}
+                            text={LABELS.feedbackBasedSolutionDescription}
+                            img={'/assets/svg/ux.svg'}
+                            imgAlt={LABELS.feedbackBasedSolutionDescription}
+                        />
                     </div>
-
-                    <div className="col-md-12 col-lg-4 mb-5">
-                        <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                            <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <Image layout="fill"className="img-fluid" src="/assets/svg/file-storage.svg" alt="..." />
-                            <div className="service-description mt-2">
-                                <h4>Uită de hârtii!</h4>
-                                <p>Propunem soluții ce au rolul de a simplifica și organiza procesul birocratic intern.</p>
-                            </div>
-                        </div>
+                    <div className="col-md-6 col-lg-4 mb-5">
+                        <ServiceCard
+                            title={LABELS.forgetPapers}
+                            text={LABELS.forgetPapersDescription}
+                            img={'/assets/svg/content-management.svg'}
+                            imgAlt={LABELS.forgetPapersDescription}
+                        />
                     </div>
-
-                    <div className="col-md-12 col-lg-4 mb-5">
-                        <div className="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
-                            <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <Image layout="fill"className="img-fluid" src="/assets/svg/customer-service.svg" alt="..." />
-                            <div className="service-description mt-2">
-                                <h4>Mentenanță și colaborare</h4>
-                                <p>În cazul in care întâmpini defecțiuni tehnice îți suntem alaturi.</p>
-                            </div>
-                        </div>
+                    <div className="col-md-6 col-lg-4 mb-5">
+                        <ServiceCard
+                            title={LABELS.weAreHereToHelp}
+                            text={LABELS.weAreHereToHelpDescription}
+                            img={'/assets/svg/customer-service.svg'}
+                            imgAlt={LABELS.weAreHereToHelpDescription}
+                        />
                     </div>
-
-                    
-                    
+                    <div className="col-md-6 col-lg-4 mb-5">
+                        <ServiceCard
+                            title={LABELS.getYourBussinessOnline}
+                            text={LABELS.getYourBussinessOnlineDescription}
+                            img={'/assets/svg/location.svg'}
+                            imgAlt={LABELS.getYourBussinessOnlineDescription}
+                        />
+                    </div>
                 </div>
             </div>
         </section>

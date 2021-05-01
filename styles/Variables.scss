@@ -11,11 +11,38 @@ $cyan: #17a2b8;
 $white: #fff;
 $gray: #6c757d;
 $gray-dark: #343a40;
-$primary: #68cef5;
-$secondary: #2c3e50;
-$success: #28a745;
+$primary: #0095ff;
+$secondary: #133949;
+$success: #32fca5;
 $info: #17a2b8;
-$warning: #fdd602;
+$warning: #ffab17;
 $danger: #dc3545;
-$light: #f8f9fa;
+$light: lighten($gray, 50);
 $dark: #343a40;
+
+$colors: (
+    "blue": $blue,
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "red": $red,
+    "orange": $orange,
+    "yellow": $yellow,
+    "green": $green,
+    "teal": $teal,
+    "cyan": $cyan,
+    "white": $white,
+    "gray": $gray,
+    "gray-dark": $gray-dark,
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dar": $dark
+);
+
+
+$navbar-height: 72px;

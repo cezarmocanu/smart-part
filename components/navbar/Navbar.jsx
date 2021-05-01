@@ -1,4 +1,5 @@
 import {Nav, Navbar, Button} from 'react-bootstrap';
+import Image from 'next/image'
 import LABELS from '@Strings';
 
 const NAVBAR_CONFIG = {
@@ -11,19 +12,24 @@ const NAVBAR_CONFIG = {
 
 const CLASSES = ["text-uppercase"].join(' ');
 
+const LINK_CLASSES = ["text-secondary-l-50", "thover-secondary-l-80"].join(' ');
+
 function AppNavbar() {
 
     return (
     <Navbar {...NAVBAR_CONFIG} className={CLASSES} >
-        <Navbar.Brand href="#home">{LABELS.smartPart}</Navbar.Brand>
+        <Navbar.Brand href="#home" className="d-flex align-items-center">
+            <Image layout="intrinsic" width={20} height={20} src="/assets/svg/puzzle.svg" alt={LABELS.smartPartCallToAction} />
+            <h5 className="p-0 ml-2 mb-0">{LABELS.smartPart}</h5>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navbar"/>
         <Navbar.Collapse id="main-navbar">
             <Nav className="navbar ml-auto">
-                <Nav.Link href="#services">{LABELS.services}</Nav.Link>
-                <Nav.Link href="#about">{LABELS.about}</Nav.Link>
-                <Nav.Link href="#contact">{LABELS.contact}</Nav.Link>
-                <Nav.Link href="#steps">
-                    <Button variant="warning">{LABELS.freeDemo}</Button>
+                <Nav.Link className={LINK_CLASSES} href="#services">{LABELS.services}</Nav.Link>
+                <Nav.Link className={LINK_CLASSES} href="#about">{LABELS.about}</Nav.Link>
+                <Nav.Link className={LINK_CLASSES} href="#contact">{LABELS.contact}</Nav.Link>
+                <Nav.Link className={LINK_CLASSES} href="#steps">
+                    <Button className="font-weight-bold text-secondary thover-secondary-l-80" variant="warning">{LABELS.freeDemo}</Button>
                 </Nav.Link>
             </Nav>
         </Navbar.Collapse>
