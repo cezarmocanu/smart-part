@@ -11,7 +11,6 @@ const TRANSPORTER = nodemailer.createTransport({
 
 function post(req,res) {
     const {company, contactName, email, phoneNumber, extra} = req.body;
-
     const WELCOME_MAIL = {
         from: 'smartpartinfo@gmail.com',
         to: email,
