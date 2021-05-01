@@ -1,6 +1,9 @@
 const path = require('path')
 
 module.exports = {
+  env:{
+    CLIENT_KEY: "KEYIOOOO"
+  },
   i18n:{
     locales: ['ro'],
     defaultLocale: 'ro',
