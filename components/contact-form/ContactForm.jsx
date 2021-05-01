@@ -36,7 +36,7 @@ function ContactForm(){
 
     const sendData = async () => {
         await axios.post('/api/mail',
-            {formValues},
+            {...formValues},
             {headers:{key: process.env.CLIENT_KEY}
         });
     };
