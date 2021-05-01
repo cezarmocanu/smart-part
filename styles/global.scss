@@ -1,3 +1,18 @@
+@import './Variables.scss';
+
+
+@each $name,$color in $colors {
+    .bg-#{$name} { background-color: $color;}
+    .border-#{$name} { border-color: 1px solid $color;}
+    
+    @for $i from 1 to 10 {
+        .text-#{$name}-d-#{$i * 10} {color: darken($color, $i * 10) !important;}
+        .text-#{$name}-l-#{$i * 10} {color: lighten($color, $i * 10) !important;}
+        .thover-#{$name}-d-#{$i * 10}:hover {color: darken($color, $i * 10) !important;}
+        .thover-#{$name}-l-#{$i * 10}:hover {color: lighten($color, $i * 10) !important;}
+    }
+}
+
 .section{
     height: 100vh;
-}
+};
