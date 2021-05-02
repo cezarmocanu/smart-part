@@ -25,9 +25,9 @@ function AppNavbar() {
         <Navbar.Toggle aria-controls="main-navbar"/>
         <Navbar.Collapse id="main-navbar">
             <Nav className="navbar ml-auto">
-                <Nav.Link className={LINK_CLASSES} href="#services">{LABELS.services}</Nav.Link>
-                <Nav.Link className={LINK_CLASSES} href="#about">{LABELS.about}</Nav.Link>
-                <Nav.Link className={LINK_CLASSES} href="#contact">{LABELS.contact}</Nav.Link>
+                <Nav.Link className={LINK_CLASSES} href="#services"><u>{LABELS.services}</u></Nav.Link>
+                <Nav.Link className={LINK_CLASSES} href="#about"><u>{LABELS.about}</u></Nav.Link>
+                <Nav.Link className={LINK_CLASSES} href="#contact"><u>{LABELS.contact}</u></Nav.Link>
                 <Nav.Link className={LINK_CLASSES} href="#steps">
                     <Button className="font-weight-bold text-secondary thover-secondary-l-80" variant="warning">{LABELS.freeDemo}</Button>
                 </Nav.Link>
