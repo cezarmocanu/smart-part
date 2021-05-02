@@ -1,7 +1,6 @@
-import nodemailer from 'nodemailer';
-import {getSession} from 'next-auth/client'
+import {createTransport} from 'nodemailer';
 
-const TRANSPORTER = nodemailer.createTransport({
+const TRANSPORTER = createTransport({
     service: 'gmail',
     auth: {
         user: 'smartpartinfo@gmail.com',
