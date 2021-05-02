@@ -2,13 +2,16 @@ import Image from 'next/image'
 import {Button} from 'react-bootstrap';
 import LABELS from '@Strings';
 import styles from '@Styles/AppHeader.module.scss';
+import {TitleMotion} from "./Header.motion";
 
 function AppHeader(){
     return (
         <header id="home" className={`masthead section text-white text-center ${styles['animated-masterhead']}`}>
             <div className="container d-flex align-items-center justify-content-center flex-column">
                 <Image layout="intrinsic" width={256} height={256} src="/assets/svg/puzzle.svg" alt={LABELS.smartPartCallToAction} />
-                <h1 className="masthead-heading text-uppercase mb-0 mt-3">{LABELS.smartPart}</h1>
+                <TitleMotion>
+                    <h1 className="masthead-heading text-uppercase mb-0 mt-3">{LABELS.smartPart}</h1>
+                </TitleMotion>
                 <div className="divider-custom divider-light">
                     <div className="divider-custom-line"></div>
                     <div className="divider-custom-icon"><i className="fas fa-star"></i></div>

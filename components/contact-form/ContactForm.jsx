@@ -2,6 +2,7 @@ import {useState} from 'react';
 import validator from 'validator';
 import axios from 'axios';
 import {Form, ProgressBar, Button, Col, Alert} from 'react-bootstrap';
+import {FormControlMotion, AlertMotion} from './ContactForm.motion';
 
 const FIELDS = {
     company: {
@@ -55,7 +56,7 @@ function ContactForm(){
         e.stopPropagation();
         const currentField = Object.keys(formValues)[step - 1];
         const isCurrentFieldValid = FIELDS[currentField].validate(formValues[currentField]);
-        console.log(isCurrentFieldValid)
+
         if (!isCurrentFieldValid) {
             setIsInvalid(true);
             return;
@@ -73,9 +74,12 @@ function ContactForm(){
 
     if (submitted) {
         return (
-            <Alert variant="success">
-                <p className="text-center">Îți mulțumim pentru mesaj! În scurt timp vei primi un email cu datele completate și detalii suplimentare.</p>
-            </Alert>
+            <AlertMotion>
+                <Alert variant="success">
+                    <p className="text-center">Îți mulțumim pentru mesaj! În scurt timp vei primi un email pe adresa <b>{formValues['email']}</b> cu datele completate și detalii suplimentare.</p>
+                </Alert>
+            </AlertMotion>
+            
         );
     }
 
@@ -86,6 +90,8 @@ function ContactForm(){
             
             <Form.Row className="justify-content-center mt-5">
                 {step === 1 &&
+                <FormControlMotion>
+                    
                     <Form.Group as={Col} xs={12}>
                         <Form.Control
                             name="company"
@@ -99,9 +105,12 @@ function ContactForm(){
                             Numele firmei pentru care doriti sa vă contactăm. Ex FirmaMea SRL/PFA
                         </Form.Text>
                     </Form.Group>
+                    
+                </FormControlMotion> 
                 }
 
-                {step === 2 && 
+                {step === 2 &&
+                <FormControlMotion>
                     <Form.Group as={Col} xs={12}>
                         <Form.Control
                             name="contactName"
@@ -115,9 +124,11 @@ function ContactForm(){
                             Numele persoanei cu care vom lua legatura
                         </Form.Text>
                     </Form.Group>
+                </FormControlMotion>
                 }
 
                 {step === 3 && 
+                <FormControlMotion>
                     <Form.Group as={Col} xs={12}>
                         <Form.Control
                             name="email"
@@ -131,10 +142,12 @@ function ContactForm(){
                             Emailul persoanei de contact sau al firmei
                         </Form.Text>
                     </Form.Group>
+                </FormControlMotion>
                 }
 
 
                 {step === 4 && 
+                <FormControlMotion>
                     <Form.Group as={Col} xs={12}>
                         <Form.Control
                             name="phoneNumber"
@@ -149,10 +162,12 @@ function ContactForm(){
                             Un numar de telefon pe care va putem contacta
                         </Form.Text>
                     </Form.Group>
+                </FormControlMotion>
                 }
 
 
                 {step === 5 && 
+                <FormControlMotion>
                     <Form.Group as={Col} xs={12}>
                         <Form.Control
                             name="extra"
@@ -165,6 +180,7 @@ function ContactForm(){
                             Doar daca doriti sa va sunam intr-un anumit interval orar, sau intr-o anumita zi?
                         </Form.Text>
                     </Form.Group>
+                </FormControlMotion>
                 }
                 <Col xs={12} className="d-flex justify-content-center">
                     {step > 1 && <Button variant="secondary" className="mt-2 mr-4" onClick={handleGoBack}>Înapoi</Button>}
