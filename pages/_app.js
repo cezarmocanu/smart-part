@@ -1,30 +1,21 @@
+import React from 'react';
+import Head from 'next/head'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@Styles/Theme.scss';
 import '@Styles/global.scss';
-import {motion} from 'framer-motion';
 
-function AppMotion({children, router}) {
-  const variants = {
-      hidden:{opacity:0},
-      visible:{
-        opacity:1,
-        transition: {
-          delay:0.4
-        }
-      }
-  };
-  return (
-    <motion.div key={router} initial="hidden" animate="visible" variants={variants}>
-      {children}
-    </motion.div>
-  )
-}
+import LABELS from '@Strings';
 
-function MyApp({ Component, pageProps, router}) {
+function MyApp({ Component, pageProps}) {
   return (
-    <AppMotion router={router}>
-      <Component {...pageProps} csrfToken={undefined} />
-    </AppMotion>
+      <React.Fragment>
+        <Head>
+          <title>{LABELS.smartPartCallToAction}</title>
+          <meta name="description" content={LABELS.metaDescription}></meta>
+        </Head>
+        <Component {...pageProps}/>
+      </React.Fragment>
   )
 };
 

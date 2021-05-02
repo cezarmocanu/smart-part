@@ -5,3 +5,36 @@
     background-position: center;
     background-size: cover;
 }
+
+.welcome-logo {
+    width: 15rem;
+    height: 10rem;
+    display: block;
+}
+
+@media (min-width: 0px) {
+    .text-heading {
+        font-size: 2.75rem;
+        line-height: 2.75rem;
+    }
+    
+    .text-subheading {
+        font-size: 1.25rem;
+    }
+}
+@media (min-width: 768px) {
+    
+}
+@media (min-width: 992px) {
+    .text-heading {
+        font-size: 4rem;
+        line-height: 3.5rem;
+    }
+    
+    .text-subheading {
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 1200px) {
+    
+}

@@ -1,5 +1,3 @@
-const path = require('path')
-
 module.exports = {
   env:{
     CLIENT_KEY: "KEYIOOOO"
@@ -8,7 +6,12 @@ module.exports = {
     locales: ['ro'],
     defaultLocale: 'ro',
   },
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
+  async rewrites() {
+    return [
+      {
+        source: '/articole/:slug*',
+        destination: '/articles/:slug*',
+      }
+    ]
+  }
 }

@@ -13,10 +13,35 @@
     }
 }
 
-.section{
-    height: 100vh;
-};
 
-.half-section{
-    height: 90vh;
-};
+.fluid {
+    width:100%;
+    height:100%;
+}
+.app{
+    width: 100vw;
+    height: 100vh;
+}
+
+@media (min-width: 0px) {
+    .app-container {
+        padding:1rem;
+        padding-top: $navbar-height-collapsed;
+        height: 100vh;
+        width: 100vw;
+    }
+}
+@media (min-width: 768px) {
+    .app-container {
+        padding:2rem;
+        padding-top: $navbar-height;
+        height: 100vh;
+        width: 100vw;
+    }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+    
+}

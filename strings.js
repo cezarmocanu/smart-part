@@ -1,5 +1,6 @@
 const LABELS = {
     about: 'Despre Noi',
+    articles: 'Articole',
     automate: 'Automatizează',
     contact: 'Contact',
     digitalize: 'Digitalizează',
@@ -12,6 +13,7 @@ const LABELS = {
     getFreeDemo: 'Obține Demo Gratuit',
     getYourBussinessOnline: 'Pune-ți afacerea online!',
     getYourBussinessOnlineDescription: 'Daca ai nevoie de mai multa expunere sau de un website, SmartPart iți este alaturi.',
+    home: 'Acasa',
     metaDescription: 'Obține o analiză și un demo gratuit! Digitalizează-ți afacerea și automatizează procesele repetitive și inutile printr-o aplicatie Smart Part.',
     planAndAnalyze: 'Analiză și planificare',
     planAndAnalyzeDescription: 'Realizăm o analiză a proceselor ce se deruleaza in firma dumeanvoastra și propunem posibile solutii de digitalizare a acestora.',
