@@ -20,9 +20,11 @@ export default function Articles(){
                 <Row className="justify-content-center align-items-start fluid mx-0">
                     <Link href="/articole/5-motive-pentru-care-este-importanta-digitalizarea-afacerii-tale">
                         <Col sm={10} md={10} lg={6} as="article" className={`${styles['article']} p-0`}>
-                            <Image layout="fill" src="/assets/blog/digitalizeaza-afacerea.jpg"/>
+                            <div className={`${styles['article-image']}`}>
+                                <Image style={{display:'block'}}layout="intrinsic" width={766} height={485} src="/assets/blog/digitalizeaza-afacerea.jpg" alt="5-motive-pentru-care-este-importanta-digitalizarea-afacerii-tale"/>
+                            </div>
                             <div className={`${styles['article-overlay']} fluid`}>
-                                <h3 className={styles['title']}>5 motive pentru care e necesară digitalizarea afacerii tale</h3>
+                                <h5 className={styles['title']}>5 motive pentru care e necesară digitalizarea afacerii tale</h5>
                             </div>
                         </Col>
                     </Link>
