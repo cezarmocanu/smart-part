@@ -16,7 +16,7 @@ export default function Home() {
         <PageSection id='services'>
             <PageSectionHeading text={LABELS.services}/>
             <Row className='justify-content-center'>
-                <Col md={6} lg={4} className='mb-5'>
+                <Col md={6} lg={4} className='mb-5' key='prototype-col'>
                     <ServiceCard
                         title={LABELS.planAndAnalyze}
                         text={LABELS.planAndAnalyzeDescription}
@@ -25,7 +25,7 @@ export default function Home() {
                     />
                 </Col>
 
-                <Col md={6} lg={4} className='mb-5'>
+                <Col md={6} lg={4} className='mb-5'  key='ux-col'>
                     <ServiceCard
                         title={LABELS.feedbackBasedSolution}
                         text={LABELS.feedbackBasedSolutionDescription}
@@ -34,7 +34,7 @@ export default function Home() {
                     />
                 </Col>
 
-                <Col md={6} lg={4} className='mb-5'>
+                <Col md={6} lg={4} className='mb-5' key='cm-key'>
                     <ServiceCard
                         title={LABELS.forgetPapers}
                         text={LABELS.forgetPapersDescription}
@@ -43,7 +43,7 @@ export default function Home() {
                     />
                 </Col>
                 
-                <Col md={6} lg={4} className='mb-5'>
+                <Col md={6} lg={4} className='mb-5' key='cs-key'>
                     <ServiceCard
                         title={LABELS.weAreHereToHelp}
                         text={LABELS.weAreHereToHelpDescription}
@@ -52,7 +52,7 @@ export default function Home() {
                     />
                 </Col>
 
-                <Col md={6} lg={4} className='mb-5'>
+                <Col md={6} lg={4} className='mb-5' key='location-key'>
                     <ServiceCard
                         title={LABELS.getYourBussinessOnline}
                         text={LABELS.getYourBussinessOnlineDescription}
@@ -77,7 +77,7 @@ export default function Home() {
             <PageSectionHeading text={LABELS.freeDemo}/>
             
             <Row className='justify-content-center'>
-                <Col md={6} lg={4} className='mb-5'>
+                <Col md={6} lg={4} className='mb-5' key='contact-us-key'>
                     <ServiceCard
                         title={'Contactează-ne!'}
                         text={'Printr-un email la smartpartinfo@gmail.com sau completează formularul de mai jos și te contactăm noi.'}
@@ -86,7 +86,7 @@ export default function Home() {
                     />
                 </Col>
 
-                <Col md={6} lg={4} className='mb-5'>
+                <Col md={6} lg={4} className='mb-5' key='analisis-key'>
                     <ServiceCard
                         title={'Analiză de bază'}
                         text={'Organizăm o întalnire, analizăm procesele din compania ta, și discutăm idei preliminare'}
@@ -95,7 +95,7 @@ export default function Home() {
                     />
                 </Col>
 
-                <Col md={6} lg={4} className='mb-5'>
+                <Col md={6} lg={4} className='mb-5' key='show-demo-key'>
                     <ServiceCard
                         title={'Prezentare demo'}
                         text={'În decurs de 30 de zile, revenim cu o aplicație demonstrativa gratuită, și stabilim o posbila colaborare.'}
@@ -109,7 +109,7 @@ export default function Home() {
         <hr/>
 
         <PageSection id='contact'>
-            <PageSectionHeading text={LABELS.freeDemo}/>
+            <PageSectionHeading text={LABELS.contact}/>
             <Row>
                 <Col lg={6} className='mx-auto'>
                     <ContactForm/>

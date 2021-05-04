@@ -5,7 +5,6 @@ function PageSectionHeading({text, Component, classes, dividerVariant}){
     return (
         <React.Fragment>
             <Component className={`${styles['section-heading']} text-center text-uppercase mt-5 ${classes.text}`}>{text}</Component>
-            
             <div className={styles['divider']}>
                 <div className={`${styles['divider-line']} bg-${dividerVariant}`}></div>
                 {/*TODO Replace this with FontAwesome Icon <div className="divider-custom-icon"><i className="fas fa-star"></i></div> */}
