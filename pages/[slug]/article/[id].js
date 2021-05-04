@@ -13,12 +13,12 @@ export default function Article({title, image, paragraphs}){
             <AppNavbar />
             <PageSection>
                 <PageSectionHeading text={title} />
-                {image && <Image src={image}  width={256} height={256} quality={35}/>}
+                {image && <Image src={image} alt={title} width={256} height={256} quality={35}/>}
                 {
                     paragraphs.map( par => {
                         return (
                             <div key={par.title}>
-                                {par.image && <Image src={par.image} layout='responsive' width={256} height={256} quality={35} />}
+                                {par.image && <Image src={par.image} layout='responsive' alt={par.title} width={256} height={256} quality={35} />}
                                 <h3>{par.title}</h3>
                                 <p>{par.text}</p>
                             </div>)
