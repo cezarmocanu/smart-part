@@ -1,5 +1,8 @@
 @import './Variables.scss';
 
+html {
+    scroll-behavior: smooth;
+}
 
 @each $name,$color in $colors {
     .bg-#{$name} { background-color: $color;}
