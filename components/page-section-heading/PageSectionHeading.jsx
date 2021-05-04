@@ -24,4 +24,4 @@ PageSectionHeading.defaultProps = {
     dividerVariant: 'secondary'
 };
 
-export {PageSectionHeading};
+export default PageSectionHeading;

@@ -31,4 +31,4 @@ ServiceCard.defaultProps = {
     text: 'Card Content'
 };
 
-export {ServiceCard};
+export default ServiceCard;

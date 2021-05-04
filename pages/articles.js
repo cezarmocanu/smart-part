@@ -1,15 +1,17 @@
 import {useMemo} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic'
 import {ARTICLES_DB} from '@Constants';
 
 import {Col, Row} from 'react-bootstrap';
-import {PageSection} from '@Components/page-section/PageSection';
-import {PageSectionHeading} from '@Components/page-section-heading/PageSectionHeading';
-import {AppNavbar} from '@Components/navbar/Navbar';
 
 import styles from '@Styles/Blog.module.scss';
 import LABELS from '@Strings';
+
+const AppNavbar = dynamic(() => import('@Components/navbar/Navbar'));
+const PageSection = dynamic(() => import('@Components/page-section/PageSection'));
+const PageSectionHeading = dynamic(() => import('@Components/page-section-heading/PageSectionHeading'));
 
 
 export default function Articles({articles}){
@@ -20,6 +22,7 @@ export default function Articles({articles}){
                 <article className={`${styles['article']}`}>
                     <div className={`${styles['article-image']} fluid`}>
                         <Image layout='responsive'
+                            priority={true}
                             quality={35}
                             width={766}
                             height={485}

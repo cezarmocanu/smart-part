@@ -38,4 +38,4 @@ function AppNavbar() {
     );
 }
 
-export {AppNavbar};
+export default AppNavbar;

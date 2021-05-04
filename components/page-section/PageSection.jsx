@@ -20,4 +20,4 @@ PageSection.defaultProps = {
     Component: 'section'
 };
 
-export {PageSection};
+export default PageSection;

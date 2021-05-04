@@ -2,8 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link';
 import {Button} from 'react-bootstrap';
 
-import {PageSection} from '@Components/page-section/PageSection';
-import {PageSectionHeading} from '@Components/page-section-heading/PageSectionHeading';
+import PageSection from '@Components/page-section/PageSection';
+import PageSectionHeading from '@Components/page-section-heading/PageSectionHeading';
 
 import styles from '@Styles/AppHeader.module.scss';
 import LABELS from '@Strings';
@@ -36,4 +36,4 @@ function AppHeader(){
     );
 }
 
-export {AppHeader};
+export default AppHeader;

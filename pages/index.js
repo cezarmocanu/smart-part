@@ -1,10 +1,11 @@
 import {Col, Row} from 'react-bootstrap';
-import {ServiceCard} from '@Components/service-card/ServiceCard';
-import ContactForm from '@Components/contact-form/ContactForm';
-import {AppNavbar} from '@Components/navbar/Navbar';
-import {AppHeader} from '@Components/header/Header';
-import {PageSection} from '@Components/page-section/PageSection';
-import {PageSectionHeading} from '@Components/page-section-heading/PageSectionHeading';
+import dynamic from 'next/dynamic'
+const ServiceCard = dynamic(() => import('@Components/service-card/ServiceCard'));
+const ContactForm = dynamic(() => import('@Components/contact-form/ContactForm'));
+const AppHeader = dynamic(() => import('@Components/header/AppHeader'));
+const AppNavbar = dynamic(() => import('@Components/navbar/Navbar'));
+const PageSection = dynamic(() => import('@Components/page-section/PageSection'));
+const PageSectionHeading = dynamic(() => import('@Components/page-section-heading/PageSectionHeading'));
 
 import LABELS from '@Strings';
 

@@ -1,10 +1,10 @@
 import Image from 'next/image';
+import dynamic from 'next/dynamic'
 import {findOne, ARTICLES_DB} from '@Constants';
 
-import {PageSection} from '@Components/page-section/PageSection';
-import {PageSectionHeading} from '@Components/page-section-heading/PageSectionHeading';
-import {AppNavbar} from '@Components/navbar/Navbar';
-
+const AppNavbar = dynamic(() => import('@Components/navbar/Navbar'));
+const PageSection = dynamic(() => import('@Components/page-section/PageSection'));
+const PageSectionHeading = dynamic(() => import('@Components/page-section-heading/PageSectionHeading'));
 
 export default function Article({title, image, paragraphs}){
     
