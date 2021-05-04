@@ -1,5 +1,6 @@
 const LABELS = {
     about: 'Despre Noi',
+    aboutDescription: 'Suntem o echipă de tineri entuziaști cu experiență în domeniul IT, ce doresc să aduca inovație serviciilor din România. Indiferent de domeniu, scopul echipei noastre este să creeze o soluție potrivită ce va sporii eficiența în firma dumeanvoastra.',
     articles: 'Articole',
     automate: 'Automatizează',
     contact: 'Contact',
