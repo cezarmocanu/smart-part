@@ -29,6 +29,11 @@ export default function Article({title, image, paragraphs}){
     );
 }
 
+Article.defaultProps = {
+    title: '',
+    image: undefined,
+    paragraphs: []
+};
 
 export async function getStaticPaths() {
     return {
