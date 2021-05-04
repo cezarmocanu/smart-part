@@ -9,8 +9,16 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: '/articole/:slug*',
-        destination: '/articles/:slug*',
+        source: '/:slug',
+        destination: '/articles',
+      },
+      {
+        source: '/:slug',
+        destination: '/articles',
+      },
+      {
+        source: '/:slug/articol/:id*',
+        destination: '/:slug/article/:id*',
       }
     ]
   }

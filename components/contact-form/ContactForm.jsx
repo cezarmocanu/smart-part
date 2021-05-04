@@ -34,7 +34,6 @@ function ContactForm(){
     const [isInvalid, setIsInvalid] = useState(false);
 
     const sendData = async () => {
-        
         await post('/api/mail',
             {...formValues},
             {headers:{key: process.env.CLIENT_KEY}
