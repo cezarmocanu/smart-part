@@ -18,7 +18,7 @@ export default function Article({title, image, paragraphs}){
                     paragraphs.map( par => {
                         return (
                             <div>
-                                {par.image && <Image src={par.image} layout='responsive' width={256} height={256} quality={35}/>}
+                                {par.image && <Image src={par.image} layout='responsive' width={256} height={256} quality={35} />}
                                 <h3>{par.title}</h3>
                                 <p>{par.text}</p>
                             </div>)

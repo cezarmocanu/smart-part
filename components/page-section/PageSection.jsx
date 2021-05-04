@@ -5,10 +5,7 @@ function PageSection({Component, id, classes, children, full}){
 
     return (
         <Component id={id}
-            className={`
-                ${styles['section']}
-                ${full && styles['full']}
-                ${classes.section}`}>
+            className={`${styles['section']} ${full ? styles['full'] : ''} ${classes.section}`}>
             <Container className={classes.container}>
                 {children}
             </Container>

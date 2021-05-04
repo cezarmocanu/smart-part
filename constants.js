@@ -13,7 +13,7 @@ export const ARTICLES_DB = [
     {
         id: 1,
         title: '5 Motive pentru care este importanta digitalizarea afacerii tale',
-        image: '/assets/blog/digitalizeaza-afacerea.jpg',
+        image: '/assets/blog/radiant-phone.jpg',
         paragraphs: [
             {
                 title: 'Paragraph 1',
