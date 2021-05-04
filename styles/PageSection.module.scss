@@ -1,0 +1,19 @@
+@import './Variables.scss';
+
+.full {
+    height: 100vh;
+    width: 100vw;
+}
+
+@media (min-width: 0px) {
+    .section {
+        padding: 8rem 0 4rem 0;
+        padding-top: $navbar-height-collapsed;
+    }
+}
+@media (min-width: 768px) {
+    .section {
+        padding: 8rem 0 4rem 0;
+        padding-top: $navbar-height;
+    }
+}
